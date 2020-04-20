@@ -9,6 +9,15 @@ import com.nexon.fragmentmore.fragments.GameListFragment
 import com.nexon.fragmentmore.fragments.MainFragment
 
 class FragPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position){ 
+            0 -> "메인"
+            1 -> "게임 리스트"
+            else -> "거래 게시판"
+        }
+    }
+    
     override fun getItem(position: Int): Fragment {
         return when(position){
             0 -> MainFragment()
