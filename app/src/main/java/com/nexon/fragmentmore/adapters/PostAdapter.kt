@@ -28,6 +28,14 @@ class PostAdapter (context: Context, resID : Int, list: ArrayList<Post>) : Array
 //    위에서 이미 null 체크가 끝났으므로 내가 가져올 리스트 아이템은 !!를 사용해 강제 언랩핑해서 사용 준비
         val row = tempRow!!
 //     findViewById를 할때는 찾을 객체의 속성을 <> 안에 정확히 입력해야 객체를 가져올 수 있음
+        val companyNameText = row.findViewById<TextView>(R.id.companyNameText)
+        val userNameText = row.findViewById<TextView>(R.id.userNameText)
+        val amountText = row.findViewById<TextView>(R.id.amountText)
+
+        val postData = mList.get(position)
+        companyNameText.text = postData.companyNmae
+        userNameText.text = postData.userName
+        amountText.text = String.format("%,d주", postData.amount)
 
 
         return  row
