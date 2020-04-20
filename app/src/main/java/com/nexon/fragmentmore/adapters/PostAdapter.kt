@@ -37,7 +37,6 @@ class PostAdapter (context: Context, resID : Int, list: ArrayList<Post>) : Array
         userNameText.text = postData.userName
         amountText.text = String.format("%,d주", postData.amount)
 
-
         return  row
     }
 

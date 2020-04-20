@@ -16,10 +16,16 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+//      프래그먼트 안으로 접근해서 해당 부분 코드 제어하기
+        hideTextBtn.setOnClickListener {
+
+        }
+
     }
 
     override fun setValues() {
         myViewPager.adapter = FragPagerAdapter(supportFragmentManager)
+        myTabLayout.setupWithViewPager(myViewPager)
     }
 
 }
