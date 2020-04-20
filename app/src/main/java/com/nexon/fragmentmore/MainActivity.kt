@@ -10,9 +10,11 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
     }
 
     override fun setValues() {
+
     }
 
 }
